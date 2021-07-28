@@ -50,14 +50,15 @@ Before:
 ```
 #9 I can not answer the question as I live in Austin, TX. My unit is installe d inside the home that has an annual temperature variation from 68 degrees in the winter to 80 degrees in the summer. The unit has functioned flawlessly si nce I installed it. I am very happy with the unit. My original unit lasted 12 years plus. 
 #17 Can the cans be safely stored in my car? I live in Scottsdale Arizona and car temps hit 150ish in the summer. 
-#19 Hello, do you have any of the other senco models on hand (16g) i live in montreal canada and other sellers do not seem to want to ship to us canucks #20 I live in Gainesville Florida, is a thermostat recommended?? 
+#19 Hello, do you have any of the other senco models on hand (16g) i live in montreal canada and other sellers do not seem to want to ship to us canucks 
+#20 I live in Gainesville Florida, is a thermostat recommended?? 
 ```
 
 After:
 ```
 #9 I can not answer the question as I live in [LOCATION], TX. My unit is inst alled inside the home that has an annual temperature variation from 68 degree s in the winter to 80 degrees in the summer. The unit has functioned flawless ly since I installed it. I am very happy with the unit. My original unit last ed 12 years plus. 
 #17 Can the cans be safely stored in my car? I live in [LOCATION] [LOCATION] and car temps hit 150ish in the summer. 
-#19 Hello, do you have any of the other senco models on hand (16 g) i live in [LOCATION] [LOCATION] and other sellers do not seem to want to ship to us can ucks 
+#19 Hello, do you have any of the other senco models on hand (16 g) i live in [LOCATION] [LOCATION] and other sellers do not seem to want to ship to us canucks 
 #20 I live in [LOCATION] [LOCATION], is a thermostat recommended??
 ```
 
