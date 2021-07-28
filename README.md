@@ -1,5 +1,5 @@
 # anonymizac
-This app is an initial Conversational AI data anonymization implementation by Zachary Wilkins, written over the course of one day. It could in theory be used as a starting point for removing PII from customers' data to ensure data security compliance, without comprimising the utility of that data. 
+This app is an initial Conversational AI data anonymization implementation by Zachary Wilkins, written over the course of one day. It could in theory be used as a starting point for removing PII from customers' data to ensure data security compliance, without compromising the utility of that data. 
 
 ## Why anonymize data?
 Anonymization of customer data is a legal necessity for virtually every Conversational AI company. Conversational AI companies are often eager to train models on their customers' data. However, before that data is received, Conversational AI companies usually must comply with GDPR, SOC 2, and other security regulations. Conversational AI companies that do not comply may find that customers will refuse to work with the Conversational AI company out of fear of a user data privacy lawsuit. Most of these agreements require that data is anonymized before it is transferred from the customer to the Conversational AI service provider.
