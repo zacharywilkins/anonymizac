@@ -1,15 +1,17 @@
 # anonymizac
-This repo contains an initial Conversational AI data anonymization implementation by Zachary Wilkins. It can be used as a starting point for removing PII from customers' data to ensure data security compliance, without compromising the utility of that data. 
+This repo contains an initial AI data anonymization implementation by Zachary Wilkins. It can be used as a starting point for removing PII from customers' data to ensure data security compliance, without compromising the utility of that data. 
 
 ## Why anonymize data?
-Anonymization of customer data is a legal necessity for virtually every Conversational AI company. Conversational AI companies are often eager to train models on their customers' data. However, before that data is received, Conversational AI companies usually must comply with GDPR, SOC 2, and other security regulations. Conversational AI companies that do not comply may find that customers will refuse to work with the Conversational AI company out of fear of a user data privacy lawsuit. Most of these agreements require that data is anonymized before it is transferred from the customer to the Conversational AI service provider.
+Anonymization of customer data is a legal necessity for virtually every NLP product. AI companies are often eager to train models on their customers' data. However, before that data is received, data consumers such as Machine Learning Engineeers must comply with GDPR, SOC 2, and other security regulations. AI companies that do not comply may find that customers will refuse to work with the AI company out of fear of a user data privacy lawsuit. Most customer agreements require that data is anonymized before it is transferred from the customer to the AI service provider.
 
+## What data needs to be anonymized?
 Anonymization techniques can ensure that Personally Identifiable Information ("PII") is removed from language data. PII is often defined as data that is specific enough to be tied to a specific individual. For example, say a dataset provided by a third party includes customer service requests, such as "Hello, I am having an issue with my laptop overheating. My laptop is Model 0539-40586-A and is a 2016 Macbook Air. Feel free to call me at (555) 943-4950 or email me at john@gmail.com". Here, the PII are the user's phone number and email, which a nefarious actor could use to figure out who the person is for their own personal gain. Examples such as the one I just gave would need to have PII such as phone numbers and emails removed before the data is sent to the AI service provider to funnel into their ETL for model training, testing, and deployment.
 
+## Why not just scrape with simple rules?
 Effective anonymization should not only remove PII, but it should also ensure that non-PII data that can be useful for model training is not removed. For example, a poorly designed anonymization algorithm might remove all integers in an attempt to scrub phone numbers, social security numbers, etc. Unfortunately, the data would become far less useful if anonymized in this way. Numbers such as error codes, laptop model numbers, or the year the laptop is from could all be useful information to say, for example, train a model that identifies a user's specific IT issue. That data would have been erroneously removed as part of unsophisticated anonymization approaches, rendering the data devoid of certain high-utility pieces of information. 
 
 ## The data
-As I believe should always be the case with Conversational AI, you need to start by first finding the closest relevant data possible for the problem you are trying to solve, ideally in the domain of your product. In this case, I focused on the domain of user-generated customer service requests. I found unanonymized data from an open-source dataset released by Amazon (http://jmcauley.ucsd.edu/data/amazon/qa/). See below a sample of that data that I compiled which contains PII (to be clear, this is readily available on the internet, so I am not including personal data that one cannot find through a simple series of Google searches).
+As I believe should always be the case with machine learning, you need to start by first finding the closest relevant data possible for the problem you are trying to solve, ideally in the domain of your product. In this case, I focused on the domain of user-generated customer service requests. I found unanonymized data from an open-source dataset released by Amazon (http://jmcauley.ucsd.edu/data/amazon/qa/). See below a sample of that data that I compiled which contains PII (to be clear, this is readily available on the internet, so I am not including personal data that one cannot find through a simple series of Google searches).
 
 ```
 # PII Examples from Amazon's `qa_Tools_and_Home_Improvement` dataset: 
@@ -25,7 +27,7 @@ pii_data = {
 }
 ```
 
-As you can see, users have included a great deal of personal information that could make it possible to locate them in the world. Take the first user input as an example. The user includes the size of her home `I have a 2,700 sq ft house`, the city where she lives `I live in Seattle`, and her name `Kate`. To comply with security measures such as GDPR and SOC 2, and most B2B service agreements in the Conversational AI industry, it is sufficient to anonymize data to the point that a single individual cannot be identified from their data. 
+As you can see, users have included a great deal of personal information that could make it possible to locate them in the world. Take the first user input as an example. The user includes the size of her home `I have a 2,700 sq ft house`, the city where she lives `I live in Seattle`, and her name `Kate`. To comply with security measures such as GDPR and SOC 2, and most B2B service agreements in the AI industry, it is sufficient to anonymize data to the point that a single individual cannot be identified from their data. 
 
 
 ## Scope
